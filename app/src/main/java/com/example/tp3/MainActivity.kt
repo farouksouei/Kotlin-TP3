@@ -5,7 +5,10 @@ import androidx.compose.material.FloatingActionButton
 import androidx.compose.material.Icon
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.R
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
@@ -19,11 +22,16 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.BottomAppBar
 import androidx.compose.material.Icon
 import androidx.compose.material.IconButton
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.channels.ChannelResult.Companion.closed
 import kotlinx.coroutines.launch
 import androidx.compose.material.Text as Text1
@@ -41,9 +49,25 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun DrawerContent(name: String) {
     Column() {
-        Text1(text = "Hello $name!")
-        Text1(text = "Hello $name!")
-        Text1(text = "Hello $name!")
+        /*
+        Image(contentDescription ="Profile",
+            painter = painterResource (id = R.image),
+            modifier= Modifier
+                .size(40.dp)
+                .clip(shape = CircleShape)
+                .border(1.5.dp, MaterialTheme.colors.secondary, CircleShape), )
+                
+         */
+        Text1(text = "Hello $name! ",
+            style=MaterialTheme.typography.h1,)
+        Text1(text = "Hello $name!",
+            style=MaterialTheme.typography.h2,)
+        Text1(text = "Hello $name!",
+            style=MaterialTheme.typography.h3,)
+        Text1(text = "Hello $name!",
+            style=MaterialTheme.typography.h4,)
+        Text1(text = "Hello $name!",
+            style=MaterialTheme.typography.h5,)
     }
 }
 
